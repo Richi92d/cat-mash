@@ -8,6 +8,9 @@ const routes: Routes = [
     path: 'home', component: PageHomeComponent,
   },
   {
+    path: '', redirectTo: 'home', pathMatch: 'full'
+  },
+  {
     path: 'vote', component: PageVoteComponent
   }
 ];

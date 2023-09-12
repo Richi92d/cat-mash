@@ -1,1 +1,22 @@
-<p>template-table works!</p>
+<div class="container">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- rating Column -->
+        <ng-container matColumnDef="url">
+            <th mat-header-cell *matHeaderCellDef> Img </th>
+            <td mat-cell *matCellDef="let element">
+                <img class="img-size" src="{{element.url}}" alt="cats">
+            </td>
+        </ng-container>
+
+        <!-- rating Column -->
+        <ng-container matColumnDef="rating">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Classement </th>
+            <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+
+    </table>
+</div>

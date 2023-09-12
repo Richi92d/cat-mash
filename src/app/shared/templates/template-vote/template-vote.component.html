@@ -1,1 +1,5 @@
-<p>template-vote works!</p>
+<div class='wrapper'>
+    <div class="cat" *ngFor="let cat of twoCats" (click)="voteForThisCat(cat.id)">
+        <img class="cat-image" [src]="cat.url">
+    </div>
+</div>

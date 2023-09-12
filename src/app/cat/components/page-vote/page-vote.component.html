@@ -1,1 +1,20 @@
-<p>page-vote works!</p>
+<div class="container">
+
+    <div class="mat-tab-container">
+        <mat-tab-group>
+
+            <!-- vote component -->
+            <mat-tab label="Vote">
+                <app-template-vote [twoCats]="twoCatsArray" (emitVote)="voteForThisCat($event)"></app-template-vote>
+            </mat-tab>
+
+            <!-- classement component -->
+            <mat-tab label="Classement">
+                <ng-template matTabContent>
+                    <app-template-table [columns]="displayedColumns" [ratingCats]="allLikedCat"></app-template-table>
+                </ng-template>
+            </mat-tab>
+
+        </mat-tab-group>
+    </div>
+</div>

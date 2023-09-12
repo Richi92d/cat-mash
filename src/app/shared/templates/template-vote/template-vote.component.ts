@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Cat } from 'src/app/cat/interface/cat.interface';
 
 @Component({
   selector: 'app-template-vote',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./template-vote.component.scss']
 })
 export class TemplateVoteComponent {
+
+  @Input() public twoCats: Cat[] = [];
+  @Output() public emitVote: EventEmitter<string> = new EventEmitter<string>();
+
+  voteForThisCat(id: string) {
+    this.emitVote.emit(id);
+  }
 
 }

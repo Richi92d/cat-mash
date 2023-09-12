@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-template-cat-homepage',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TemplateCatHomepageComponent {
 
+  @Output() public emitClickEvent: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
+
+  goToVotePage(event: MouseEvent) {
+    this.emitClickEvent.emit(event)
+  }
 }

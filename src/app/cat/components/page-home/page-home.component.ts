@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-home',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-home.component.scss']
 })
 export class PageHomeComponent {
+
+  constructor(private router: Router) { }
+
+  goToVotePage() {
+    this.router.navigate(['/catmash/vote']);
+  }
 
 }

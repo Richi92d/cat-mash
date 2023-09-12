@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+    .cat img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 2vw;
+        border-radius: 10px 55px;
+        cursor: pointer;
+    }
+
+    .cat img:hover {
+        border: 2px solid white;
+    }
+}

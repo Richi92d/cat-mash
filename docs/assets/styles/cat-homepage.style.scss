@@ -1,0 +1,49 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+    .title {
+        text-align: center;
+        font-size: 50px;
+        margin: 40px 0;
+    }
+    .center-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10vh;
+
+        .button-style {
+            color: white;
+        }
+
+        .button-style:hover {
+            border: 1px solid white;
+        }
+    }
+    .cat {
+        position: relative;
+        top: 5vh;
+        max-width: 300px;
+        margin: auto;
+    }
+    #cauda {
+        width: 72px;
+        height: 79px;
+        animation: cauda 4s forwards infinite;
+        transform-origin: right bottom;
+        transform-box: fill-box;
+    }
+
+    @keyframes cauda {
+        0% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(30deg);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+    }
+}

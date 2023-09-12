@@ -1,12 +1,1 @@
-.container {
-    display: flex;
-    width: 50vw;
-    max-height: 60vh;
-    overflow: auto;
-
-    .img-size {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-    }
-}
+@import url("src/assets/styles/table.style.scss");
